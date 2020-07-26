@@ -12,6 +12,8 @@ struct ContentView: View {
     
     // MARK: 设置动画状态
     @State var show = false
+    // MARK: 设置view状态
+    @State var viewState = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -27,9 +29,10 @@ struct ContentView: View {
                 .offset(x: 0, y: show ? -400 : -40)
                 .scaleEffect(0.85)
                 .rotationEffect(Angle(degrees: show ? 15 : 0))
-//                .rotation3DEffect(Angle(degrees: show ? 50 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
+                //                .rotation3DEffect(Angle(degrees: show ? 50 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
                 .blendMode(.hardLight)
                 .animation(.easeOut(duration: 0.7))
+                .offset(x: viewState.width, y: viewState.height)
             CardView()
                 .background(show ? Color.blue : Color("primary"))
                 .cornerRadius(10.0)
@@ -37,19 +40,33 @@ struct ContentView: View {
                 .offset(x: 0, y: show ? -200 : -20)
                 .scaleEffect(0.9)
                 .rotationEffect(Angle(degrees: show ? 10 : 0))
-//                .rotation3DEffect(Angle(degrees: show ? 40 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
+                //                .rotation3DEffect(Angle(degrees: show ? 40 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
                 .animation(.easeOut(duration: 0.5))
+                .offset(x: viewState.width, y: viewState.height)
                 .blendMode(.hardLight)
+            
             CertificateView()
+                .offset(x: viewState.width, y: viewState.height)
                 .scaleEffect(0.95)
                 .rotationEffect(Angle(degrees: show ? 5 : 0))
-//                .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
+                //                .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
                 //response：控制动画持续时间
                 //dampingFraction：阻尼控制,0代表永远反弹，大于1不会反弹
                 .animation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0))
                 .onTapGesture {
                     self.show.toggle()
-            }
+                }
+                .gesture(
+                    DragGesture()
+                        .onChanged({ value in
+                            self.viewState = value.translation
+                            self.show = true
+                        })
+                        .onEnded({ value in
+                            self.viewState = CGSize.zero
+                            self.show = false
+                        })
+                )
             
             CardBottomView()
                 .blur(radius: show ? 20 : 0)
