@@ -9,30 +9,51 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // MARK: 设置动画状态
+    @State var show = false
+    
     var body: some View {
         ZStack {
             
             TitleView()
-//                .blur(radius: 20)
+                .blur(radius: show ? 20 : 0)
+                .animation(.default)
             
             CardView()
-                .offset(x: 0, y: -40)
+                .background(show ? Color.red : Color.blue)
+                .cornerRadius(10.0)
+                .shadow(radius: 20.0)
+                .offset(x: 0, y: show ? -400 : -40)
                 .scaleEffect(0.85)
-                .rotationEffect(Angle(degrees: 15))
-                .rotation3DEffect(Angle(degrees: 50), axis: (x: 10.0, y: 10.0, z: 10.0))
+                .rotationEffect(Angle(degrees: show ? 15 : 0))
+//                .rotation3DEffect(Angle(degrees: show ? 50 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
                 .blendMode(.hardLight)
+                .animation(.easeOut(duration: 0.7))
             CardView()
-                .offset(x: 0, y: -20)
+                .background(show ? Color.blue : Color("primary"))
+                .cornerRadius(10.0)
+                .shadow(radius: 20.0)
+                .offset(x: 0, y: show ? -200 : -20)
                 .scaleEffect(0.9)
-                .rotationEffect(Angle(degrees: 10))
-                .rotation3DEffect(Angle(degrees: 40), axis: (x: 10.0, y: 10.0, z: 10.0))
+                .rotationEffect(Angle(degrees: show ? 10 : 0))
+//                .rotation3DEffect(Angle(degrees: show ? 40 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
+                .animation(.easeOut(duration: 0.5))
                 .blendMode(.hardLight)
             CertificateView()
                 .scaleEffect(0.95)
-                .rotationEffect(Angle(degrees: 5))
-                .rotation3DEffect(Angle(degrees: 30), axis: (x: 10.0, y: 10.0, z: 10.0))
+                .rotationEffect(Angle(degrees: show ? 5 : 0))
+//                .rotation3DEffect(Angle(degrees: show ? 30 : 0), axis: (x: 10.0, y: 10.0, z: 10.0))
+                //response：控制动画持续时间
+                //dampingFraction：阻尼控制,0代表永远反弹，大于1不会反弹
+                .animation(.spring(response: 0.5, dampingFraction: 0.5, blendDuration: 0))
+                .onTapGesture {
+                    self.show.toggle()
+            }
             
             CardBottomView()
+                .blur(radius: show ? 20 : 0)
+                .animation(.default)
         }
     }
 }
@@ -49,9 +70,6 @@ struct CardView: View {
             Text("Cark Back")
         }
         .frame(width: 340.0, height: 280.0)
-        .background(Color.blue)
-        .cornerRadius(10.0)
-        .shadow(radius: 20.0)
     }
 }
 
