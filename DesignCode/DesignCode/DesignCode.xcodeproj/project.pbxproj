@@ -14,6 +14,7 @@
 		B6379ACE24C42D9A001CDA20 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6379ACD24C42D9A001CDA20 /* Preview Assets.xcassets */; };
 		B6379AD124C42D9A001CDA20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6379ACF24C42D9A001CDA20 /* LaunchScreen.storyboard */; };
 		B6400B4E24CD55BA002B5C75 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B4D24CD55BA002B5C75 /* Home.swift */; };
+		B6400B5024CDAC8A002B5C75 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B4F24CDAC8A002B5C75 /* HomeList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		B6379AD224C42D9A001CDA20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6400B4C24CD5462002B5C75 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B6400B4D24CD55BA002B5C75 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B6400B4F24CDAC8A002B5C75 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				B6379AC624C42D97001CDA20 /* SceneDelegate.swift */,
 				B6379AC824C42D97001CDA20 /* ContentView.swift */,
 				B6400B4D24CD55BA002B5C75 /* Home.swift */,
+				B6400B4F24CDAC8A002B5C75 /* HomeList.swift */,
 				B6379ACA24C42D9A001CDA20 /* Assets.xcassets */,
 				B6379ACF24C42D9A001CDA20 /* LaunchScreen.storyboard */,
 				B6379AD224C42D9A001CDA20 /* Info.plist */,
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6379AC524C42D97001CDA20 /* AppDelegate.swift in Sources */,
+				B6400B5024CDAC8A002B5C75 /* HomeList.swift in Sources */,
 				B6379AC724C42D97001CDA20 /* SceneDelegate.swift in Sources */,
 				B6400B4E24CD55BA002B5C75 /* Home.swift in Sources */,
 				B6379AC924C42D97001CDA20 /* ContentView.swift in Sources */,
