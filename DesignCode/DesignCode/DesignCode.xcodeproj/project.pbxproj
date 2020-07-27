@@ -16,6 +16,7 @@
 		B6400B4E24CD55BA002B5C75 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B4D24CD55BA002B5C75 /* Home.swift */; };
 		B6400B5024CDAC8A002B5C75 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B4F24CDAC8A002B5C75 /* HomeList.swift */; };
 		B6400B5224CEA6AC002B5C75 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5124CEA6AC002B5C75 /* BlurView.swift */; };
+		B6400B5424CEB324002B5C75 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5324CEB323002B5C75 /* UpdateList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B6400B4D24CD55BA002B5C75 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B6400B4F24CDAC8A002B5C75 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		B6400B5124CEA6AC002B5C75 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		B6400B5324CEB323002B5C75 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				B6379ACF24C42D9A001CDA20 /* LaunchScreen.storyboard */,
 				B6379AD224C42D9A001CDA20 /* Info.plist */,
 				B6379ACC24C42D9A001CDA20 /* Preview Content */,
+				B6400B5324CEB323002B5C75 /* UpdateList.swift */,
 			);
 			path = DesignCode;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6379AC524C42D97001CDA20 /* AppDelegate.swift in Sources */,
+				B6400B5424CEB324002B5C75 /* UpdateList.swift in Sources */,
 				B6400B5024CDAC8A002B5C75 /* HomeList.swift in Sources */,
 				B6379AC724C42D97001CDA20 /* SceneDelegate.swift in Sources */,
 				B6400B4E24CD55BA002B5C75 /* Home.swift in Sources */,
@@ -303,6 +307,7 @@
 				DEVELOPMENT_TEAM = 45C77WAEL5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +328,7 @@
 				DEVELOPMENT_TEAM = 45C77WAEL5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DesignCode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
