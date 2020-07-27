@@ -18,7 +18,6 @@ struct UpdateList: View {
     }
     // 移动item
     func move(from source: IndexSet, to destination: Int) {
-        #warning("not use swap!!! crash!!!")
         store.updates.move(fromOffsets: source, toOffset: destination)
     }
     

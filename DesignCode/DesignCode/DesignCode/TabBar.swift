@@ -1,0 +1,41 @@
+//
+//  TabBar.swift
+//  DesignCode
+//
+//  Created by evestorm on 2020/7/27.
+//  Copyright © 2020 evelance. All rights reserved.
+//
+
+import SwiftUI
+
+struct TabBar: View {
+    var body: some View {
+        TabView {
+            Home().tabItem({
+                VStack {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            })
+            .tag(1)
+            ContentView()
+                .tabItem {
+                    Image(systemName: "aspectratio")
+                    Text("Certificates")
+            }
+            .tag(2)
+            UpdateList()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Updates")
+            }
+            .tag(3)
+        }
+    }
+}
+
+struct TabBar_Previews: PreviewProvider {
+    static var previews: some View {
+        TabBar()
+    }
+}
