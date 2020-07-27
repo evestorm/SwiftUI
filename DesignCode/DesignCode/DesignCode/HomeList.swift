@@ -13,21 +13,37 @@ struct HomeList: View {
     
     var course = CourseData
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 30) {
-                ForEach(course) { item in
-                    Button(action: {
-                        self.showCourseView = true // 设置按钮点击动作
-                    }) {
-                        CourseView(title: item.title, image: item.image, color: item.color, shadowColor: item.shadowColor) // 把当前卡片设置为button的自定义外观
-                    }.sheet(isPresented: self.$showCourseView) {
-                        ContentView() // 弹出 contentView
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Courses")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                    Text("22 course")
+                        .foregroundColor(.gray)
+                }
+                Spacer()
+            }
+            .padding(.leading, 70)
+            .padding(.bottom, 40)
+                
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 30) {
+                    ForEach(course) { item in
+                        Button(action: {
+                            self.showCourseView = true // 设置按钮点击动作
+                        }) {
+                            CourseView(title: item.title, image: item.image, color: item.color, shadowColor: item.shadowColor) // 把当前卡片设置为button的自定义外观
+                        }.sheet(isPresented: self.$showCourseView) {
+                            ContentView() // 弹出 contentView
+                        }
                     }
                 }
+                .padding(.leading, 40)
+                Spacer()
             }
-            .padding(.leading, 30)
-            Spacer()
         }
+        .padding(.top, 78.0)
     }
 }
 
@@ -49,7 +65,7 @@ struct CourseView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .padding(20)
+                .padding(30)
                 .lineLimit(4)
                 .padding(.trailing, 30)
             Spacer()
