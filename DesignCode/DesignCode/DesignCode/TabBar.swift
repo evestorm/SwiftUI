@@ -26,10 +26,16 @@ struct TabBar: View {
             .tag(2)
             UpdateList()
                 .tabItem {
-                    Image(systemName: "gear")
+                    Image(systemName: "list.dash")
                     Text("Updates")
             }
             .tag(3)
+            Settings()
+                .tabItem {
+                    Image(systemName: "gear")
+                    Text("Settings")
+            }
+            .tag(4)
         }
     }
 }
