@@ -158,6 +158,6 @@ struct CardBottomView: View {
         .background(BlurView(style: .systemMaterial))
         .cornerRadius(30.0)
         .shadow(radius: 30)
-        .offset(x: 0, y: 600)
+        .offset(y: UIScreen.main.bounds.height - 170)
     }
 }

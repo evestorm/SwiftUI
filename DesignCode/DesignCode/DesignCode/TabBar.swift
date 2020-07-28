@@ -37,6 +37,7 @@ struct TabBar: View {
             }
             .tag(4)
         }
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
@@ -44,8 +45,8 @@ struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             TabBar()
-            TabBar()
-                .environment(\.colorScheme, .dark)
+//            TabBar()
+//                .environment(\.colorScheme, .dark)
         }
 //            .environment(\.sizeCategory, .extraExtraLarge)
     }

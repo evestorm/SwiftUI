@@ -17,15 +17,15 @@ struct CertificateRow: View {
             Text("Certificates")
                 .font(.system(size: 20))
                 .fontWeight(.heavy)
-                .padding(.leading, 40)
+                .padding(.leading, 30)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20.0) {
                     ForEach(certificates) { item in
                         CertificateView(item: item)
                     }
                 }
-            .padding(20)
-                .padding(.leading, 20)
+                .padding(20)
+                .padding(.leading, 10)
             }
         }
     }
