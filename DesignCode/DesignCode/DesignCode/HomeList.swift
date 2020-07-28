@@ -13,37 +13,48 @@ struct HomeList: View {
     
     var course = CourseData
     var body: some View {
-        VStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("Courses")
-                        .font(.largeTitle)
-                        .fontWeight(.heavy)
-                    Text("22 course")
-                        .foregroundColor(.gray)
+        ScrollView {
+            VStack {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Courses")
+                            .font(.largeTitle)
+                            .fontWeight(.heavy)
+                        Text("22 course")
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
                 }
-                Spacer()
-            }
-            .padding(.leading, 70)
-            .padding(.bottom, 40)
-                
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 30) {
-                    ForEach(course) { item in
-                        Button(action: {
-                            self.showCourseView = true // 设置按钮点击动作
-                        }) {
-                            CourseView(title: item.title, image: item.image, color: item.color, shadowColor: item.shadowColor) // 把当前卡片设置为button的自定义外观
-                        }.sheet(isPresented: self.$showCourseView) {
-                            ContentView() // 弹出 contentView
+                .padding(.leading, 70)
+                    
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 30) {
+                        ForEach(course) { item in
+                            Button(action: {
+                                self.showCourseView = true // 设置按钮点击动作
+                            }) {
+                                GeometryReader { geometry in
+                                    // 把当前卡片设置为button的自定义外观
+                                    CourseView(title: item.title, image: item.image, color: item.color, shadowColor: item.shadowColor)
+                                        .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 40) / -20), axis: (x: 0, y: 10, z: 0))
+    //                                Text(String(Double(geometry.frame(in: .global).minX))) // 当前包裹卡片的GeometryReader的x坐标相对整个屏幕的最小x值
+                                }
+                                .frame(width: 246, height: 150)
+                            }.sheet(isPresented: self.$showCourseView) {
+                                ContentView() // 弹出 contentView
+                            }
                         }
                     }
+                    .padding(.leading, 40)
+                    .padding(.top, 30)
+                    Spacer()
                 }
-                .padding(.leading, 40)
-                Spacer()
+                .frame(height: 450)
+                
+                CertificateRow()
             }
+            .padding(.top, 78.0)
         }
-        .padding(.top, 78.0)
     }
 }
 
@@ -103,5 +114,23 @@ let CourseData = [
         image: "Card3",
         color: Color("pink"),
         shadowColor: Color("pinkshadow")
+    ),
+    Course(
+        title: "Swift UI Advanced",
+        image: "Card4",
+        color: Color("darkblue"),
+        shadowColor: Color("darkblueshadow")
+    ),
+    Course(
+        title: "Framer Playground",
+        image: "Card5",
+        color: Color("pink"),
+        shadowColor: Color("pinkshadow")
+    ),
+    Course(
+        title: "Flutter for Designers",
+        image: "Card6",
+        color: Color("darkblue"),
+        shadowColor: Color("darkblueshadow")
     ),
 ]

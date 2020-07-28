@@ -21,6 +21,7 @@
 		B6400B5824CEC678002B5C75 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5724CEC678002B5C75 /* UpdateStore.swift */; };
 		B6400B5A24CED29E002B5C75 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5924CED29E002B5C75 /* TabBar.swift */; };
 		B6400B5C24D02453002B5C75 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5B24D02453002B5C75 /* Settings.swift */; };
+		B6400B5E24D04D54002B5C75 /* CertificateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5D24D04D54002B5C75 /* CertificateRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		B6400B5724CEC678002B5C75 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		B6400B5924CED29E002B5C75 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		B6400B5B24D02453002B5C75 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B6400B5D24D04D54002B5C75 /* CertificateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				B6400B4D24CD55BA002B5C75 /* Home.swift */,
 				B6400B4F24CDAC8A002B5C75 /* HomeList.swift */,
 				B6400B5B24D02453002B5C75 /* Settings.swift */,
+				B6400B5D24D04D54002B5C75 /* CertificateRow.swift */,
 				B6400B5124CEA6AC002B5C75 /* BlurView.swift */,
 				B6379ACA24C42D9A001CDA20 /* Assets.xcassets */,
 				B6379ACF24C42D9A001CDA20 /* LaunchScreen.storyboard */,
@@ -182,6 +185,7 @@
 				B6379AC924C42D97001CDA20 /* ContentView.swift in Sources */,
 				B6400B5224CEA6AC002B5C75 /* BlurView.swift in Sources */,
 				B6400B5C24D02453002B5C75 /* Settings.swift in Sources */,
+				B6400B5E24D04D54002B5C75 /* CertificateRow.swift in Sources */,
 				B6400B5A24CED29E002B5C75 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
