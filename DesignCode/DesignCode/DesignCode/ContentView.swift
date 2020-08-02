@@ -205,14 +205,17 @@ struct CardBottomView: View {
                 
                 VStack(alignment: .leading, spacing: 8.0) {
                     Text("SwiftUI").fontWeight(.bold)
-                    Text("12 of 12 sections completed\n10 hours spent so far").font(.footnote)
+                    Text("12 of 12 sections completed\n10 hours spent so far")
+//                        .font(.footnote)
+                        .modifier(CustomFontModifier(size: 14))
                         .foregroundColor(.gray)
                         .lineSpacing(4)
                 }
                 .padding(20)
                 .background(Color.white)
                 .cornerRadius(20)
-                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+                .modifier(ShadowModifier())
+                .modifier(FontModifier(style: .body))
             }
             
             Spacer()
