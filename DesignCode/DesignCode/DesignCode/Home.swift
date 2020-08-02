@@ -30,7 +30,7 @@ struct Home: View {
                 .cornerRadius(30)
                 .shadow(radius: 20)
                 .animation(.spring())
-                .offset(y: showProfile ? statusBarHeight + 40 : UIScreen.main.bounds.height)
+                .offset(y: showProfile ? statusBarHeight + 30 : UIScreen.main.bounds.height)
             
             MenuButton(show: $show)
                 .offset(x: -40, y: showProfile ? statusBarHeight : 80)
@@ -51,8 +51,8 @@ struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             Home().previewDevice("iPhone SE")
-            Home().previewDevice("iPhone Xr")
-            Home().previewDevice("iPad Pro (9.7-inch)")
+//            Home().previewDevice("iPhone Xr")
+//            Home().previewDevice("iPad Pro (9.7-inch)")
         }
     }
 }

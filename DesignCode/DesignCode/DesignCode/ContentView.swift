@@ -23,6 +23,8 @@ struct ContentView: View {
             TitleView()
                 .blur(radius: show ? 20 : 0)
                 .animation(.default)
+                .padding(10)
+                .padding(.leading, 10)
             
             CardBottomView()
             .blur(radius: show ? 20 : 0)
@@ -75,6 +77,7 @@ struct ContentView: View {
                 )
             
         }
+        .padding()
     }
 }
 
