@@ -22,6 +22,7 @@
 		B6400B5A24CED29E002B5C75 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5924CED29E002B5C75 /* TabBar.swift */; };
 		B6400B5C24D02453002B5C75 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5B24D02453002B5C75 /* Settings.swift */; };
 		B6400B5E24D04D54002B5C75 /* CertificateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6400B5D24D04D54002B5C75 /* CertificateRow.swift */; };
+		B681DD6524D67E93005FD98F /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B681DD6424D67E93005FD98F /* RingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B6400B5924CED29E002B5C75 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		B6400B5B24D02453002B5C75 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B6400B5D24D04D54002B5C75 /* CertificateRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateRow.swift; sourceTree = "<group>"; };
+		B681DD6424D67E93005FD98F /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B6379AC624C42D97001CDA20 /* SceneDelegate.swift */,
 				B6400B5924CED29E002B5C75 /* TabBar.swift */,
 				B6379AC824C42D97001CDA20 /* ContentView.swift */,
+				B681DD6424D67E93005FD98F /* RingView.swift */,
 				B6400B4D24CD55BA002B5C75 /* Home.swift */,
 				B6400B4F24CDAC8A002B5C75 /* HomeList.swift */,
 				B6400B5B24D02453002B5C75 /* Settings.swift */,
@@ -181,6 +184,7 @@
 				B6400B5024CDAC8A002B5C75 /* HomeList.swift in Sources */,
 				B6400B5624CEBF28002B5C75 /* UpdateDetail.swift in Sources */,
 				B6379AC724C42D97001CDA20 /* SceneDelegate.swift in Sources */,
+				B681DD6524D67E93005FD98F /* RingView.swift in Sources */,
 				B6400B4E24CD55BA002B5C75 /* Home.swift in Sources */,
 				B6379AC924C42D97001CDA20 /* ContentView.swift in Sources */,
 				B6400B5224CEA6AC002B5C75 /* BlurView.swift in Sources */,
